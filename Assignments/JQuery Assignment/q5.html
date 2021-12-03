@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#box").animate({left:'600px',height:'220px',width:'80px'},1000);
+                $("#box").animate({height:'50px',width:'220px'},'slow');
+                $("#box").animate({right:'600px',height:'220px',width:'80px'},1000);
+                $("#box").animate({height:'50px',width:'220px'},'slow');
+            });
+            $("#btn2").click(function(){
+                $("#box").animate({right:'600px',height:'100px',width:'100px',top:'0',left:'0'},1000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="ani"></div>
+
+        <button id="btn1">Animate height & width</button> 
+        <button id="btn2">Reset</button> 
+        <div id="box" style="background:#98bf21;height:100px;width:100px;margin:6px;position: relative;"></div> 
+       
+    
+</body>
+</html>

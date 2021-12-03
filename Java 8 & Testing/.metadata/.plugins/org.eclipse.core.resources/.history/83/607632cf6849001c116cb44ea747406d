@@ -1,0 +1,22 @@
+package com.coforge.training.mockitodemo;
+
+public class Library {
+	
+	Person person;
+	Books book;
+	
+	public void bookIssuedTo( ) {
+		person = new Person("Rahul","GZB",2);
+		book = new Books(10,"How I Met Your Mother");
+		
+		System.out.println(person.getName()+" Issued : "+book.getAuthor());
+	}
+	
+	
+	/*public static void main(String [] args) {
+	
+	Library lib = new Library();
+	lib.bookIssuedTo();
+		
+	}*/
+}

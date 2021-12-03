@@ -1,0 +1,25 @@
+package com.practice;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+public class Stream5 {
+
+	public static void main(String[] args) {
+		List<Integer> IntegerArray= new ArrayList<Integer>();
+		IntegerArray.add(1);
+		IntegerArray.add(3);
+		IntegerArray.add(14);
+		IntegerArray.add(24);
+		IntegerArray.add(11);
+		IntegerArray.add(100);
+		IntegerArray.add(142);
+		
+		Optional<Integer> ans = IntegerArray.stream().max((a,b)->Integer.compare(a, b));
+		System.out.println(ans.get());
+
+	}
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <script>
+        function getFormvalue(){
+            var x= document.getElementById("form1");
+            document.write("Entered name is : ")
+            for(var i=0; i<x.length;i++){
+                if(x.elements[i].value!='Submit'){
+                    document.write(x.elements[i].value+" ");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">Form</h1>
+    <p>Write a Javascript function to get the values of First and Last name of following form.</p>
+    <br>
+    <form id="form1" onsubmit="getFormvalue()" style="text-align: center;">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

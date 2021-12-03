@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Data from External File using Ajax in jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $("button").click(function(){
+
+        $("#box").load("content.html"); //Load() methods injects data into the DOM
+
+    });
+
+});
+
+</script>
+</head>
+<body>
+    <h1>AJAX Load() Method Demo</h1>
+    <h5>The load() method loads data from a server and puts the returned data into the selected element.</h5>
+    <div id="box">
+
+        <h2>Click button to load new content inside DIV box</h2>
+
+    </div>
+
+    <button type="button">Load Content</button>
+</body>
+</html>
+
+<!-- AJAX always requires a server to work. Wont perform functions if run directly through file. -->

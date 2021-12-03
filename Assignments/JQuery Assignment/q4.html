@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus event</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+margin-left: 450px;
+        }
+        span {
+          display: none;
+          color:red;
+            }
+    </style>
+    <script>
+        $(document).ready(function(){
+        $("input").focus(function() {
+        $(this).next("span").css("display", "inline").fadeOut(5000);
+        console.log("innn");
+        });
+        });
+    </script>
+</head>
+<body>
+    <br>
+    <h2>Displaying Message on Focus event.</h2><br><br><br>
+    <p> Username :  <input type="text"> <span>Don't give spaces</span></p>
+    <p>Password :  <input type="text"> <span>Use Strong Password: More than 8 characters</span></p> 
+    
+</body>
+</html>

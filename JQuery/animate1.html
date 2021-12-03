@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of jQuery Animation Effects</title>
+
+   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+
+<style type="text/css">
+    img{
+        position: relative; /* Required to move element */
+        }
+</style>
+    <script type="text/javascript">
+    $(document).ready(function(){    
+        $("button").click(function(){        
+            $("img").animate({            
+                left: 700,height:'300px',width:'300px'        
+            },10000);    
+        });
+    });
+</script>
+
+
+</head>
+<body>
+    
+ <h1>Example of jQuery Animation Effects</h1>    
+<button type="button">Start Animation</button>    
+<p>        
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Amanita_muscaria_%28fly_agaric%29.JPG/800px-Amanita_muscaria_%28fly_agaric%29.JPG" alt="Mushroom">    
+</p>
+
+
+</body>
+</html>

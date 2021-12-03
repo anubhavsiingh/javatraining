@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        p{
+            padding: 20px;
+            font: 20px sans-serif;
+            background: khaki;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+
+
+    <script>     
+        $(document).ready(function(){           
+            $(".myClass").click(function(){
+                $(this).slideUp();             
+            });        
+        
+
+            $("button").click(function(){
+                $(".test").hide();
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <p class="myClass">Paragraph with class "myClass"</p>
+
+<p class="myPara">Paragraph with class "anotherClass"</p>
+
+ 
+
+<div class="myClass">Div with class "myClass"</div>
+
+<div class="myDiv">Div with class "mydiv"</div>
+
+ 
+
+<a href="#" class="myClass">Anchor with class "myClass"</a>
+
+<a href="#" class="myAnchor">Anchor with class "myAnchor"</a>
+
+ 
+
+<button id="colorButton">Change Color</button>
+
+<h2 class="test">This is a heading</h2>
+
+<p class="test">This is a paragraph.</p>
+
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+</body>
+</html>

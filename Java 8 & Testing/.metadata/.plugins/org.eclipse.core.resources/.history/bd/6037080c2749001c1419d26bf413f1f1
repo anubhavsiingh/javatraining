@@ -1,0 +1,91 @@
+package com.coforge.training.mockitodemo;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Spy;
+import org.mockito.junit.MockitoJUnitRunner;
+
+@RunWith(MockitoJUnitRunner.class)
+class MockitoSpyTest {
+
+List<String> list=new ArrayList<String>();
+
+
+
+@Spy
+List<String> listSpy=new ArrayList<String>(list);
+
+
+
+// @Before
+// void setUp() throws Exception {
+// list=new ArrayList<String>();
+// listSpy=new ArrayList<String>(list);
+// }
+
+
+
+@Test
+void test() {
+listSpy.add("James Gosling");
+System.out.println(listSpy.get(0));
+
+// assertTrue("James Gosling".equals(listSpy.get(0)));
+
+assertEquals("James Gosling", listSpy.get(0));
+//
+// when(listSpy.get(0)).thenReturn("Red Johnson");
+//
+// assertEquals("Red Johnson", listSpy.get(0));
+
+}
+
+
+
+}
+
+
+class MockitoSpyTest1 {
+	
+	//Mock listWithData = mock(MockitoSpyTest.class);
+	
+	
+	
+	
+	@Mock
+	List<String> list;
+	List<Integer> list1;
+	@Mock
+	List<String> listSpy;
+	public List<Integer> listSpy1;
+	@BeforeEach
+	void setUp() throws Exception {
+		list = new ArrayList<String>();
+		list1 = Arrays.asList(2,3,4,5);
+		listSpy1 = spy(list1);
+	}
+
+	@Test
+	void test() {
+		listSpy1.add(3);
+		listSpy.add("gosling");
+		System.out.println(listSpy.get(0));
+		assertEquals("gosling",listSpy.get(0));
+		when(listSpy.get(0)).thenReturn("Heyy");
+		
+		System.out.println(listSpy.get(0));
+		assertEquals("Heyy",listSpy.get(0));
+	}
+
+}

@@ -1,0 +1,55 @@
+How to build Jar files : Add this in pom.xml Inside <properties>
+			<maven.compiler.source>15</maven.compiler.source>
+    			<maven.compiler.target>15</maven.compiler.target>
+
+			Right click on maven proj >> Run as maven >> build . . >> goals 
+			>> clean verify then find the path in console
+
+How to run Jar fie : Go to folder in which you copied .jar now open cmd >> 
+			set path= C://.....jre/bin like that latest java version >>
+
+			then java -cp MavenAssign.jar (jar file name) com.coforge.training.jfsd.MavenAssign.App
+			(full classpath with package)
+
+
+
+
+
+**** Steps to create war file & deploy it in Tomcat Web Server*******
+
+1) Create maven Webapp project
+
+2) Designed index.jsp and more.... files
+-- Check the O/p --> Run as Server
+3) Add below dependency to pom.xml
+
+Inside <build><plugins>
+<plugin>
+<groudId>org.apache.maven.plugins</groupId>
+<artifactId>maven-war-plugin</artifactId>
+<version>3.3.1</version>
+</plugin>
+
+4) Create war file
+-Right cLick--> Project -->Run As --> Maven Build...
+goals-- clean verify
+
+5) It will create *.war file in target folder .. eg : mavenweb.war
+
+6) Stop Tomcat in Eclipse...
+
+7) Go to target folder of maven project & copy *.war file to tomcat's
+webapps folder.
+
+8) GO to command prompt of tomcat's bin folder & set jre_home path
+
+D:\apache-tomcat-9.0.12\bin> SET JRE_HOME=C:\Program Files\Java \jdk1.8.0_141\jre
+
+9) Start Tomcat server -
+D:\apache-tomcat-9.0.12\bin>startup
+
+10) Open Browser --> http://localhost:8085/mavenweb/
+-- Open home page of maven web
+
+11) Stop Tomcat server -
+D:\apache-tomcat-9.0.12\bin>shutdown

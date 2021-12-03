@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+
+    
+<script> $(document).ready(function(){  $("#flip").click(function(){    $("#panel").slideToggle("slow");  });});</script> <style> #panel,#flip{padding:5px;text-align:center;background-color:#ade21a;border:solid 1px #c3c3c3;}#panel{padding:50px;display:none;}</style>
+</head>
+<body>
+
+
+<div id="flip">jQuery Slide Toggle</div><div id="panel">The slideToggle() method toggles between slideUp() and   slideDown() for the selected elements.  This method checks the selected elements for visibility.   slideDown() is run if an element is hidden. slideUp() is   run if an element is visible - This creates a toggle effect.</div>
+
+
+    
+</body>
+</html>

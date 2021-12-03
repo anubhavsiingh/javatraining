@@ -1,0 +1,29 @@
+package com.coforge.training.mockitodemo;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.spy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class MockitoSpyTest {
+	
+	List<String> list;
+	List<String> listSpy;
+	@BeforeEach
+	void setUp() throws Exception {
+		list = new ArrayList<String>();
+		listSpy = spy(list);
+	}
+
+	@Test
+	void test() {
+		listSpy.add("gosling");
+		System.out.println(listSpy.get(0));
+		//assertEquals("gosling",listSpy.get(0));
+	}
+
+}

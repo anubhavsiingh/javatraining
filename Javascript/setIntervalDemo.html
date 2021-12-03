@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#divcls {
+    background: green;
+    height: 200px;
+    width:300px;
+    border-radius: 15px;
+    padding:20px;
+    font-size:22px;
+    color:#fff;}
+    
+    .btncls{
+        background-color:#FF0000;
+        border: #2e6da4;
+        font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+        font-size: 15px;
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: normal;
+        border-radius: 4px;
+        line-height: 1.5;
+        text-decoration:none;}</style>
+
+
+</head>
+<body>
+<div id="divcls"></div><p><button class="btncls" onclick="clearint()">Stop color change by clearInterval</button></p>  <p>Click "Try it". Wait 3 seconds. The page will alert     "Hello".</p>    <button onclick="setTimeout(function(){alert('Hello')},3000);">      Try it</button>  <br><br>      <div id="clock" style="background-color: aqua;
+color: blue;
+font-weight: bolder;
+width: 200px;
+height: 50px;
+text-align: center;
+border: 5px solid brown;
+border-radius: 5px;
+padding-top: 10px;">
+</div>
+
+<script>setInterval(showTime,1000);function showTime(){  let dt=new Date();  let t=dt.toLocaleTimeString();  document.getElementById("clock").innerHTML=t;}varToggle=setInterval(function(){ func_setInterval() }, 1000);function clearint(){  clearInterval(varToggle);}function func_setInterval(){if (document.getElementById("divcls").style.backgroundColor == 'green'){    document.getElementById("divcls").style.backgroundColor = 'blue';}else{    document.getElementById("divcls").style.backgroundColor = 'green';}}    </script> 
+
+
+    
+</body>
+</html>

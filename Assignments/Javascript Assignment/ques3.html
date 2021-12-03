@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <script>
+        function array_Num(array){
+            array.sort(function(x,y){
+                return x-y;
+            });
+            var uni=[array[0]];
+            var result=[];
+
+            for(var j=1; j<array.length;j++){
+                if(array[j-1] != array[j])
+                {
+                    uni.push(array[j]);
+                }
+            }
+            result.push(uni[1],uni[uni.length-2]);
+        document.write("The input array is : "+array +"<br><br>");
+        document.write("Second lowest is : " + result[0] + "<br>" + "  Second Greatest is : " +result[1]);
+        }
+        
+    </script>
+</head>
+<body>
+    <p> Javascript function which will take an array of numbers stored and find second lowest and second greatest numbers respectively.</p>
+    <br>
+    <script>
+        array_Num([1,2,3,4,5]); 
+    </script>
+</body>
+</html>

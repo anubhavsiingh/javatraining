@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form- Forms in Html5</title>
+    <style>
+        h1,h2{color: blue;}
+
+        input[type=submit], input[type=reset] {
+background-color: #4CAF50;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
+/*to center the table*/
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
+<script>
+    function validateFirstName()
+{
+    if(document.regform.fname.value=="")
+    document.getElementById("fnameError").innerHTML="*First Name Cannot be Blank";
+    var regexp=/^[a-zA-Z]+$/; //start & end with alphabets
+    if(regexp.test(document.regform.fname.value))
+    {
+        document.getElementById("fname").
+        style.backgroundColor="yellow";
+    }
+    else
+    {
+        document.getElementById("fname").
+        style.backgroundColor="red";
+        document.getElementById("fnameError").innerHTML=
+        "*Invalid First Name"
+    }
+}
+    function clearMessage()
+        {
+            document.getElementById("fnameError").innerHTML="";
+}
+        function validateUserName()
+{
+    var unameregexp=/^[a-zA-Z0-9_]+$/; //start with alphabets end with 0-9 or _
+    if(unameregexp.test(document.regform.uname.value))
+    {
+        document.getElementById("uname").
+        style.backgroundColor="yellow";
+    }
+    else
+    {
+        document.getElementById("uname").
+        style.backgroundColor="red";
+        document.getElementById("unameError").innerHTML=
+        "*Invalid User Name"
+    }
+}
+
+function clearMessage2()
+{
+    document.getElementById("unameError").innerHTML="";
+}
+function clearMessage3()
+        {
+            document.getElementById("pwdError").innerHTML="";
+        }
+        function validatePassword()
+        {
+            //To check a password between 7 to 16 characters which
+            //contain only characters, numeric digits, underscore and
+            //first character must be a letter
+            // \w matches any word character (alphanumeric) including
+            //the underscore (equivalent to [A-Za-z0-9_]).
+            var passregexp=/^[A-Za-z]\w{7,15}$/;
+            if(passregexp.test(document.regform.pass.value))
+            {
+                document.getElementById("pass").
+                style.backgroundColor="yellow";
+            }
+            else
+            {
+                document.getElementById("pass").
+                style.backgroundColor="red";
+                document.getElementById("pwdError").innerHTML=
+                "*Invalid Password"
+            }
+        }
+        function matchPassword()
+
+{
+    var pass=document.regform.pass.value;
+    var cpass=document.regform.cpass.value;
+    if(pass !=cpass)
+    {
+        document.getElementById("cpwdError").innerHTML=
+        "*Password and Confirm Password doesnot Match" ;
+    }
+}
+function clearMessage4()
+{
+document.getElementById("cpwdError").innerHTML="";
+}
+</script>
+</head>
+<body style="background-color: whitesmoke;">
+    <table cellpadding ="8" width="800" style="border: 1px; background-color:aqua;text-align: center;">
+        <div style="text-align: center;">
+        <caption style="text-align: center">
+            <h1> Coforge Technologies</h1>
+            <h2>User Registration Form</h2>
+        </caption>
+        <form name="regform">
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input type="text" name="fname" id="fname"
+                    size="30" placeholder="Enter Your First Name"
+                    tabindex="1" style="border-color: darkred;"
+                    autofocus onblur="validateFirstName()" onfocus="clearMessage()">
+                    <span id="fnameError" style="color: red;">
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" name="lname" id="lname"
+                    size="30" placeholder="Enter Your Last Name"
+                    tabindex="2" style="border-color: darkred;"
+                    autofocus required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>User Name</td>
+                <td>
+                    <input type="text" name="uname" id="uname"
+                    size="30" placeholder="Enter Your User Name"
+                    tabindex="3" style="border-color: darkred;"
+                    onblur="validateUserName()" onfocus="clearMessage2()">
+                    <span id="unameError" style="color: red;"></span></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="pass" id="pass"
+                    size="30" placeholder="Enter Your Password"
+                    tabindex="4" style="border-color: darkred;"
+                    onblur="validatePassword()" onfocus="clearMessage3()">
+                    <span id="pwdError" style="color: red"></span>
+                    <!--(?=.*[a-z]) - At least one lowercase letter(a - z).
+                    (?=.*\d)- At least one Numeric digit(0-9)
+                    (?=.*[A-Z]) - At least one Upper case letter(A - Z).
+                    -->
+                </td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password</td>
+                <td>
+                    <input type="password" name="cpass" id="cpass"
+                    size="30" placeholder="Enter Your Confirm Password"
+                    tabindex="5" style="border-color: darkred;"
+                    minlength="8" maxlength="14"
+                    onblur="matchPassword()" onfocus="clearMessage4()">
+                    <span id="cpwdError" style="color: red;">
+                    </span>>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Education</td>
+                <td>
+                    <input type="checkbox" name="edu1" id="edu1"
+                    value="Graduate" tabindex="7" 
+                    style="border-color: darkred;"  
+                    required> Graduate
+                    <input type="checkbox" name="edu2" id="edu2"
+                    value="Post Graduate" tabindex="8" 
+                    style="border-color: darkred;"
+                    required> Post Graduate
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" id="gender"
+                    value="Male" tabindex="8" 
+                    style="border-color: darkred;"  
+                    required> Male
+                    <input type="radio" name="gender" id="gender"
+                    value="Female" tabindex="9" 
+                    style="border-color: darkred;"
+                    required> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter Your Comments</td>
+                <td>
+                    <textarea rows="5" cols="30" wrap="hard"
+                    tabindex="10">
+                </textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>State</td>
+                <td>
+                    <select id="state" name="state" tabindex="11">
+                        <option>Andhra Pradesh</option>
+                        <option selected>Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Kerala</option>
+                        <option>Bangalore</option>
+                        <option>Gujarat</option>
+                        <option>Rajasthan</option>
+                        <option>Uttar Pradesh</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- HTML5 Form Controls -->
+
+            <tr>
+                <td>Pragramming languages</td>
+                <td>
+                    <input list="languages" tabindex="12">
+                    <!-- Datalist - AutoComplete Feature-->
+                    <datalist id="languages" name="languages">
+                        <option>Cobol</option>
+                        <option>C</option>
+                        <option>C++</option>
+                        <option>C#</option>
+                        <option>Java</option>
+                        <option>Python</option>
+                        <option>PHP</option>
+                        <option>Visual Basic</option>
+                    </datalist>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Select Your Color</td>
+                <td>
+                    <input type="color" name="favColor" id="favColor"
+                    tabindex="13">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth</td>
+                <td>
+                    <input type="date" name="dob" id="dob"
+                    tabindex="14">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Meeting Date & Time</td>
+                <td>
+                    <input type="datetime-local" name="meeting" id="meeting"
+                    tabindex="15">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email Address</td>
+                <td>
+                    <input type="email" name="email" id="email"
+                    tabindex="16" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Web site</td>
+                <td>
+                    <input type="url" name="website" id="website"
+                    tabindex="17" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Contact Number</td>
+                <td>
+                    <input type="tel" name="contact" id="contact"
+                    tabindex="18"
+                    pattern="[0-9]{4}-[0-9]{6}" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Register Me">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </form>
+    </div>
+</table>
+</body>
+</html>

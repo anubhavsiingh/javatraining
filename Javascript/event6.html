@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myFunction() {
+            alert("You pressed a key inside the input field");
+        }
+        
+        function myFunction1(x) {
+            x.style.background="yellow";
+        }
+        
+        function myFunction2() {
+            var x=document.getElementById("FNAME");
+            x.value=x.value.toUpperCase();
+        }
+        
+        function myFunction3()
+        {
+            alert("Welcome to my Web Page")
+        }        
+        </script>
+</head>
+<body>
+    <p>A function is triggered when the user is pressing a key in the input field.</p>
+
+Enter Your Name :
+
+ <INPUT TYPE="TEXT" ID="FNAME" onblur="myFunction2()">
+
+<input type="text" onkeypress="myFunction()"
+
+onfocus="myFunction1(this)">
+</body>
+</html>

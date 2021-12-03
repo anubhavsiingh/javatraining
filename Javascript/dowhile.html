@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS do while loop</title>
+</head>
+<body>
+    <script>
+
+        //generate secret no is a random integer between 1 and 12
+        const MIN = 1;
+        const MAX = 12;
+        //let keyboard declares variables with block scope /declared before use/cannot rede
+        let secretNumber = Math.floor(Math.random()*(MAX-MIN+1))+MIN;
+        document.writeln(Math.random());
+        let guesses = 0;//for storing no of guesses
+        let hint='';//for storing hint
+        let number=0;
+        do{
+            //get input from user
+            let input=prompt(`Please enter a number between ${MIN} and ${MAX}`+hint);
+            //get the integer
+            number=parseInt(Input);
+            //increase the no of guesses
+            guesses++;
+            //
+            if (number>secretNumber){
+                hint=', and less than'+number;
+            } else if (number<secretNumber){
+                hint=', and greater than'+number;
+            }else if (number==secretNumber){
+                alert('Bravo! you are correct after ${guesses} guess(es)');
+            }
+        } while(number !=secretNumber);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+    <script>
+    function myFunction() { 
+        document.getElementById("demo1").innerHTML = "Hello World"; 
+        }     
+    function myFunction1()      
+     {     alert("You Pressed a key inside input field")            }  
+    function fun1(x)            {                alert("Mouse Over Event");   
+                 x.style.background="yellow";            }    
+    function fun2(x)            {                alert("Mouse Out Event");                
+    x.style.background="green"            }            
+    function myFunction3()            {                alert("Welcome to my Web Page")            }            function myFunction2(x) {            x.style.background="yellow";            }            function myFunction4() {            var x=document.getElementById("FNAME");             x.value=x.value.toUpperCase();            }           </script>
+    
+</head>
+<body> 
+    <H1>Java Script Events</H1><button onclick="getElementById('demo').innerHTML=Date()">   
+         The time is?</button><p id="demo"></p><p>Click the button to trigger a function.</p>
+         <button onclick="myFunction()">Click me</button><p id="demo1"></p>
+         <h1 onmouseover="style.color='red'"     onmouseout="style.color='green'">Mouse over this text</h1>
+             <p>A function is triggered when the user is pressing a key         in the input field.</p>      
+           <label for="fname">Enter Your Name :</label>    
+         <input type="text" name="fname" id="fname"     onkeypress="myFunction1()">
+
+          <label for="male">Gender</label>    <input type="radio" name="male" id="male">Male    
+         <div id="hello" onmouseover="fun1(this)" onmouseout="fun2(this)"    style="background-color: aquamarine;">     
+            <h1>Handling Mouse Over and Mouse Out Events</h1>     
+            <p>Events are actions or occurrences that happen in the system you are programming — 
+                the system produces (or "fires") a signal of some kind when an event       
+            occurs, and provides a mechanism by which an action 
+            can be automatically taken (that is, some code running) when the event occurs.    </p>    </div>
+         
+         <h2> Key Board Events - keypress(), blur(),focus()</h2>    
+         <label for="FNAME">Enter Your First Name</label>    
+         <input type="text" name="FNAME" id="FNAME"     onblur="myFunction4()">    
+         <label for="LNAME">Enter Your Last Name</label>    
+         <input type="text" name="LNAME" id="LNAME"     onkeypress="myFunction1()"         onfocus="myFunction2(this)">
+         
+         
+         
+    
+</body>
+</html>

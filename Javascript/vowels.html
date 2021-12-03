@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions demo</title>
+
+    <script type="text/javascript">
+
+        function countVowels(name)
+        {
+            var count = 0;
+            for (var i=0;i<name.length;i++)
+            {
+              if(name[i] == "a" || name[i] == "e" || name[i] == "i" || name[i] == "o" || name[i] == "u")
+              count = count + 1;
+            }
+        document.write("<br>"+"Hello " + name + "!!! Your name has " + count + " vowels.");
+        }
+    </script>
+    <!--function should always be defined in the head section and call them in the body-->
+</head>
+<body>
+    <script>
+        var myName = prompt("Please enter your name");
+            countVowels(myName); // invokes function countVowels()
+            countVowels("John Micheal");
+            countVowels("Naveen Kumar");
+            countVowels("Java Script");
+    
+            let s=sumOfSeries(10); // invokes function & returns value
+            document.writeln("<br>"+"The Sum of Series is :"+s);
+    </script>
+</body>
+</html>

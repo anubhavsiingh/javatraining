@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed grid -Mobile, Desktop, Tablet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-sm-6 col-lg-8 bg-primary">.col-sm-6 .col-lg-8</div>
+        <div class="col-6 col-lg-4 bg-success">.col-6 .col-lg-4</div>
+        </div>
+        <div class="row">
+        <div class="col-6 col-sm-4 bg-secondary">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4 bg-dark text-white">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4 bg-warning">.col-6 .col-sm-4</div>
+        </div>
+
+       <div class="container">.container</div>
+<div class="container-sm">.container-sm</div>
+<div class="container-md">.container-md</div>
+<div class="container-lg">.container-lg</div>
+<div class="container-xl">.container-xl</div>
+<div class="container-xxl">.container-xxl</div>
+<div class="container-fluid">.container-fluid</div>
+<div class="table-responsive">
+<table class="table">
+    <thead>
+    <tr>
+    <th>#</th>
+    <th>Bill</th>
+    <th>Payment Date</th>
+    <th>Payment Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="table-primary">
+    <td>1</td>
+    <td>Credit Card</td>
+    <td>04/07/2021</td>
+    <td>Waiting for statement</td>
+    </tr>
+    <tr class="table-secondary">
+    <td>2</td>
+    <td>Insurance</td>
+    <td>02/07/2021</td>
+    <td>Cancelled</td>
+    </tr>
+    <tr class="table-success">
+    <td>3</td>
+    <td>Water</td>
+    <td>01/07/2021</td>
+    <td>Paid</td>
+    </tr>
+    <tr class="table-info">
+    <td>4</td>
+    <td>Internet</td>
+    <td>05/07/2021</td>
+    <td>Change plan</td>
+    </tr>
+    <tr class="table-warning">
+    <td>5</td>
+    <td>Electricity</td>
+    <td>03/07/2021</td>
+    <td>Pending</td>
+    </tr>
+    <tr class="table-danger">
+    <td>6</td>
+    <td>Telephone</td>
+    <td>06/07/2021</td>
+    <td>Due</td>
+    </tr>
+    <tr class="table-light">
+    <td>7</td>
+    <td>Car Service</td>
+    <td>08/07/2021</td>
+    <td>Call in to confirm</td>
+    </tr>
+    <tr class="table-dark">
+    <td>8</td>
+    <td>Gas</td>
+    <td>06/07/2021</td>
+    <td>Payment failed</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+
+<h2>Contextual Backgrounds</h2>
+<p>Use the contextual background classes to provide "meaning through colors".</p>
+<p>Note that you can also add a .text-* class if you want a different text color:</p>
+<p class="bg-primary text-white">This text is important.</p>
+<p class="bg-success text-white">This text indicates success.</p>
+<p class="bg-info text-white">This text represents some information.</p>
+<p class="bg-warning text-white">This text represents a warning.</p>
+<p class="bg-danger text-white">This text represents danger.</p>
+<p class="bg-secondary text-white">Secondary background color.</p>
+<p class="bg-dark text-white">Dark grey background color.</p>
+<p class="bg-light text-dark">Light grey background color.</p>
+
+<br><br>
+<div class="container mt-3">
+    <h2>Button Styles</h2>
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-dark btn-lg">Dark</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+    <div class="d-grid gap-3">
+        <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+        <button type="button" class="btn btn-success btn-block">Full-Width Button</button>
+        <button type="button" class="btn btn-danger btn-block">Full-Width Button</button>
+        </div>
+
+        <h2>Spinner Buttons</h2>
+        <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            </button><button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+            </button><button class="btn btn-primary" disabled>
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+            </button><button class="btn btn-primary" disabled>
+            <span class="spinner-grow spinner-grow-sm"></span>
+            Loading..
+            </button>
+
+            <h2>Button Groups Horizontal & Verticle</h2>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+                </div><div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <button type="button" class="btn btn-primary">Sony</button>
+                </div>  
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

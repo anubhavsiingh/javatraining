@@ -1,0 +1,2 @@
+127.0.0.1 - - [15/Nov/2021:09:06:24 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [15/Nov/2021:09:06:25 +0530] "GET /spring-mvc/WEB-INF/classes/com/nanu/springmvc/HomeController.java HTTP/1.1" 404 682

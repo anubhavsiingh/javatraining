@@ -1,0 +1,16 @@
+package com.coforge.training.mockitodemo;
+
+public class Library {
+	
+	Person person;
+	Books book;
+	
+	public void bookIssuedTo() {
+		person = new Person("Rahul","GZB",2);
+		book = new Books(10,"xyz");
+		
+		System.out.println(person.getName()+" "+book.getAuthor());
+	}
+	
+	
+}

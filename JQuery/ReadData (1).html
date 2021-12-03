@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read data from html table using js</title>
+    <style>
+        th, td, p, input {
+        font:14px Verdana;
+        }
+        table, th, td
+        {
+        border: solid 1px #DDD;
+        border-collapse: collapse;
+        padding: 2px 3px;
+        text-align: center;
+        }
+        th {
+        font-weight:bold;
+        }
+    </style>
+
+    <script>
+        function showTableData()
+        {
+            document.getElementById('info').innerHTML="";
+            var myTable=document.getElementById('empTable');
+            //loop tru each row of the table after heading
+            for(i=1;i<myTable.rows.length;i++){
+                //get the cells collection of current row
+                var objCells=myTable.rows.item(i).cells;
+
+                //loop tru each cell of current row to read cell values
+                for(j=0;j<objCells.length;j++){
+                    info.innerHTML=info.innerHTML+' '+
+                    objCells.item(j).innerHTML;
+                }
+                info.innerHTML=info.innerHTML+'<br>';
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <table id="empTable">
+        <tr>
+            <th>ID</th>
+            <th>Employee Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Alpha</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Bravo</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Jules</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Mike</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Milo</td>
+            <td>24</td>
+        </tr>
+    </table> <p><input type="button" id="bt" value="Show Table Data" onclick="showTableData()" /></p>
+    <p id="info"></p>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load another page's list items into an ordered list</title>
+    <style>
+
+        body {
+    
+            font-size: 12px;
+    
+            font-family: Arial;
+          }
+          </style>
+    
+          <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <h1>Load another page's list items into an ordered list</h1>
+
+    <h3>Project Lists</h3>
+    <ol  id="new-projects"></ol>
+    <script>
+        $("#new-projects").load("load.html #projects li")
+    </script>
+
+</body>
+</html>

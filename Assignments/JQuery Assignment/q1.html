@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct MCQ</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#but").click(()=>{
+                console.log("am in");
+                $("#t").css("color","green");
+                $("#f").hide();
+                $("#f1").hide();
+                $("#f2").hide();
+            });
+            $("#reset").click(()=>{
+                $("#f").show();
+                $("#f1").show();
+                $("#f2").show();
+                $("#t").css("color","black");
+            })
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Q. What is Ivan's favourite color ?</h2>
+    <p id="f">1. Blue </p>
+    <p id="f2">2. Green </p>
+    <p id="t">3. Red </p>
+    <p id="f1">4. Yellow </p>
+    <button type="submit" id="but">Show Answer</button>
+    <button type="submit" id="reset">Reset</button>
+</body>
+</html>

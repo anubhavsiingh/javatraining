@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS functions with Variable arguments</title>
+
+    <script>
+
+        // Defining function
+        function Sum (){
+            var ans = 0;
+            var len = Sum.arguments.length ;
+            for (i=0; i<len; i++)  
+            {  
+                ans += Sum.arguments[i];
+            }
+            document.writeln("The Sum Is :  " + ans);
+        }
+        </script>
+
+</head>
+<body>
+    
+    <script> 
+        Sum (10, 20); //Ctrl + / -> shortcut for single line comments 
+        document.write("<br>");  
+        Sum (10.60, 12.55); 
+        document.write("<br>"); 
+        Sum (10, 12.55); 
+        document.write("<br>"); 
+        Sum (10,20,30,40); 
+        document.write("<br>"); 
+        Sum (10,20,30,40,50,60,100)  
+    </script>
+
+
+</body>
+</html>
+<!-- 
+class VarargExample {
+
+    public int sumNumber(int ... args){
+        System.out.println("argument length: " + args.length);
+        int sum = 0;
+        for(int x: args){
+        sum += x;
+        }
+        return sum;
+    }
+
+    public static void main( String[] args ) {
+        VarargExample ex = new VarargExample();
+
+        int sum2 = ex.sumNumber(2, 4);
+        System.out.println("sum2 = " + sum2);
+
+        int sum3 = ex.sumNumber(1, 3, 5);
+        System.out.println("sum3 = " + sum3);
+
+        int sum4 = ex.sumNumber(1, 3, 5, 7);
+        System.out.println("sum4 = " + sum4);
+    }
+}
+
+
+ -->

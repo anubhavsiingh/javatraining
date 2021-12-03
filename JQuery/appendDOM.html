@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append methods</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(".rect").click(function() {
+                $(this).append('<div class="rect"></div>')
+            });
+
+
+
+            $("#btn1").click(function() {
+                $("p").append("<b>Newly Appended Text</b>.");
+            });
+
+
+
+            $("#btn2").click(function() {
+                $("ul").append("<li><b>Newly Appended Item</b>.</li>");
+            });
+
+        });
+    </script>
+
+    <style>
+        .rect{margin: 10px;padding: 12px;border: 2px solid brown;width:60px}
+    </style>
+</head>
+<body>
+    <h1>Append Demo</h1>
+
+    <h5>The append( content ) method appends
+
+        content to the inside of every matched element.</h5>
+
+
+
+    <div class="rect" style="background-color: red;"></div>
+    <div class="rect" style="background-color:greenyellow"></div>
+    <div class="rect" style="background-color:blue"></div>
+
+
+
+    <p>Click on any square to demonstrate append() method</p>
+
+    <p>jQuery Features</p>
+    <ul>
+        <li>Event Handling</li>
+        <li>DOM Manipulation</li>
+        <li>AJAX</li>
+        <li>CSS Manipulation</li>
+    </ul>
+
+
+
+    <button id="btn1">Append text</button>  
+    <button id="btn2">Append item</button>  
+</body>
+</html>

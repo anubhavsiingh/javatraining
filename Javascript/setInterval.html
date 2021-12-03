@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+
+    <style>
+        #divcls {
+          background: green;
+          height: 200px;
+          width:300px;
+          border-radius: 15px;
+          padding:20px;
+          font-size:22px;
+          color:#fff;  
+        }
+        </style>
+
+</head>
+<body>
+    <div id="divcls"></div>
+
+<script>
+
+window.setInterval(function(){ func_setInterval() }, 1000); //1000 milisec i.e 1 sec
+
+function func_setInterval(){
+
+if (document.getElementById("divcls").style.backgroundColor == 'green'){
+    document.getElementById("divcls").style.backgroundColor = 'blue';
+}
+
+else{
+
+    document.getElementById("divcls").style.backgroundColor = 'green';
+}
+
+}
+
+</script>
+    
+</body>
+</html>

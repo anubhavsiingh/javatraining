@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js if else statement</title>
+</head>
+<body>
+    <script>
+        var now = new Date();
+
+        document.writeln(now);
+
+        var dayOfWeek = now.getDay(); // Sunday - Saturday : 0 - 6
+
+
+        if(dayOfWeek == 5) {
+            document.writeln("Have a nice weekend!");
+        }
+        else {
+            document.writeln("Have a nice day!");
+        }
+
+        var a,b;
+        a=parseInt(prompt("Enter First Number :"));
+        b=parseInt(prompt("Enter Second Number :"));
+
+        if(a > b){
+            document.writeln("<h2>"+a + " is Greatest");
+        }
+        else{
+            document.writeln("<h2>"+b + " is Greatest");
+
+        }
+
+    </script>
+</body>
+</html>

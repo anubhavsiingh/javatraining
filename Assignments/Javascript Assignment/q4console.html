@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+<style>
+    body {
+  font-family: system-ui;
+  background: #b18ad6;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<script>
+
+    var t;
+    function currentTime() {
+
+    let date = new Date(); 
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+/*
+let session = "AM";
+
+if(hh == 0){
+   hh = 12;
+}
+if(hh > 12){
+   hh = hh - 12;
+   session = "PM";
+}
+
+hh = (hh < 10) ? "0" + hh : hh;
+mm = (mm < 10) ? "0" + mm : mm;
+ss = (ss < 10) ? "0" + ss : ss;
+ */
+//let time = hh + ":" + mm + ":" + ss + " " + session;
+let time = hh + ":" + mm + ":" + ss + " ";
+
+console.log(time);
+ 
+t = setTimeout(function(){ currentTime() }, 1000);
+}
+    function stop(){
+        clearInterval(t);
+        console.log("Done");
+    }
+
+</script>
+
+</head>
+<body>
+        
+    <button style="height: 40px;"  id="but" onclick="currentTime()">Begin</button>
+    <button style="height: 40px;" id="but" onclick="stop()">Stop </button>
+    
+</body>
+</html>

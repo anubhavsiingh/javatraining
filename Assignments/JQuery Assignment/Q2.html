@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Creating Table by fetching Json data.</title>
+
+    <style>
+        table{
+            margin: 20px;
+            background-color: rgb(255, 213, 213);
+        }
+    </style>
+    <script>
+
+        $(document).ready(function(event){
+            $.getJSON('Q2.json',function(data){
+                
+                $.each(data,function(key,value){
+                    var holdData ="";
+                    holdData+="<tr>";
+                    holdData+="<td>"+value.Id+"</td><td>"+value.Maker+"</td><td>"+
+                        "<a href='"+value.img+"'>"+value.img+"</a></td><td><a href='"+value.Url+"'>"+value.Url+"</a></td><td>"+value.Title+
+                            "</td><td>"+value.Description+"</td><td>"+value.Ratings+"</td></tr>";
+                    $("table").append(holdData);
+                });
+                });
+        });
+
+    </script>
+
+</head>
+<body>
+    
+    <table border="2">
+        <tr>
+            <th>Id</th>
+            <th>Maker</th>
+            <th>Img</th>
+            <th>Url</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Ratings</th>
+        </tr>
+    </table>
+</body>
+</html>

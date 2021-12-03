@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Nov 15 09:06:17 IST 2021
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Anubhav.Singh\\Desktop\\Spring\\spring-mvc\\src\\main\\webapp\\WEB-INF\\lib\\spring-web-5.2.9.RELEASE.jar=WEB-INF/lib/spring-web-5.2.9.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Anubhav.Singh\\Desktop\\Spring\\spring-mvc\\src\\main\\webapp\\WEB-INF\\lib\\spring-web-5.2.9.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.2.9.RELEASE-sources.jar

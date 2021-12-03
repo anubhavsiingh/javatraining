@@ -1,0 +1,3 @@
+<h1>Loading Data thru get() method</h1>
+
+<h5>get() method loads data from the server using a GET HTTP request.</h5>
