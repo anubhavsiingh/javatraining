@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+    xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="address1" class="com.coforge.training.springdemo.model.Address">
+<property name="city" value="Noida"></property>
+<property name="state" value="U.P"></property>
+<property name="country" value="India"></property>
+<property name="pincode" value="201009"></property>
+</bean>
+
+<bean id="address2" class="com.coforge.training.springdemo.model.Address">
+<property name="city" value="Agra"></property>
+<property name="state" value="U.P"></property>
+<property name="country" value="India"></property>
+<property name="pincode" value="204509"></property>
+</bean>
+
+
+<bean id="trainee1" class="com.coforge.training.springdemo.model.Trainee">
+	<property name="name" value="Rod Jhonson"/>
+	<property name="rollNo" value="BTech/07/06"/>
+	<property name="className" value="BTech"/>
+<!-- This Invokes Constructor () of Trainee class -->
+	<constructor-arg>
+		<list> <ref bean="address1"></ref>
+		<ref bean="address2"></ref>
+		</list>
+	</constructor-arg>
+</bean>
+
+</beans>
