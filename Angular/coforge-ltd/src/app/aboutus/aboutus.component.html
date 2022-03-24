@@ -1,0 +1,62 @@
+<h1>Data binding</h1>
+
+<h3>One way Databinding</h3>
+
+<p>When you want to communicate data from the component logic to the template (or vice versa), 
+    this is called one-way data binding.</p>
+
+    <h3>String Interpolation & Event binding</h3>
+
+    <div class="play-container">
+        <p>You've clicked <span (click)="countClick()">this</span> {{ clickCounter }} times.</p>
+    </div>
+
+    <h3>Property binding</h3>
+        <input type="text" name="name" [ngStyle]="{color:mycolor}" [value]="name"/>
+<h3>Style binding</h3>
+<p>
+Sometimes, you want to modify the appearance of your UI based on events that occur in your app. This is where class and style binding come into play.
+</p>
+<div class="play-container" [style.background-color]="clickCounter > 2 ? 'yellow' : 'lightgray'">
+
+    <h1>Two way Data binding</h1>
+    <p>Two way data binding means that changes made to our model in the component are propagated to the view and that any changes made in the view are immediately updated in the underlying component data. Two way data binding is useful in data entry forms. Whenever a user makes changes to a form field, we would like to update our model. Similarly, when we update the model with new data, we would like to update the view as well
+        The two way data binding is nothing but both property binding & event binding applied together. Property Binding is one way from component to view. The event binding is one way from view to component. If we combine both we will get the Two-way binding.</p>
+    
+    <h3>ngModel</h3>
+    <p>The Angular uses the ngModel directive to achieve the two-way binding on HTML Form elements. It binds to a form element like input, select, selectarea. etc. Internally It uses the ngModel in property, binding to bind to the value property and ngModelChange which binds to the input event.</p>
+        
+    <div class="play-container">
+        <p> <input type="text" [(ngModel)]="name1" ><br>
+        <strong>You said: </strong> {{ name1 }}
+        </p>
+    </div>
+
+    <hr>
+    <h3>Conditionals in Angular</h3>
+    <p>Just like most programming languages, Angular has directives like if, for and switch for handling comparisons.</p>
+    <h3>Using ngIf</h3>
+    <h1>
+        <button (click)="toggleOn1()">Toggle Greetings</button>
+        </h1>
+        <div *ngIf="toggleOn">
+        <h2>Hello</h2>
+        <p>Good morning to you</p>
+        </div>
+        <hr>
+        <p>Today is Friday and this is a dummy text element to make you feel better</p>
+        <p>Understanding the ngIf directive with the else clause</p>
+        <hr>
+
+        <div class="row">
+            Show <input type="checkbox" [(ngModel)]="showMe" />
+            </div>
+            
+            <h1>ngIf </h1>
+            
+            <p *ngIf="showMe">
+            ShowMe is checked
+            </p>
+            <p *ngIf="!showMe">
+            ShowMe is unchecked
+            </p>

@@ -1,0 +1,25 @@
+.home{
+
+    height:30em; background-size:cover; width:auto;
+    background-image:url('/assets/images/canyan.jpg.png');
+    background-position:50% 50%;
+    background-size: cover;
+  }
+
+  .content{text-align: center;
+
+    color: rgb(17, 14, 27);
+
+    font-family: arial, sans-serif;
+
+font-size: 24px;
+
+font-weight: bold;
+
+margin-top: 0px;
+
+margin-bottom: 1px;
+
+
+
+  }
